@@ -21,6 +21,7 @@ const Comments = () => {
   const startAddCommentHandler = () => setIsAddingComment(true)
 
   const addedCommentHandler = useCallback(() => {
+    setIsAddingComment(false)
     sendRequest(quoteId)
   }, [sendRequest, quoteId])
 
