@@ -26,7 +26,7 @@ const NewCommentForm = ({quoteId, onAddedComment}) => {
         <textarea id='comment' rows='5' ref={commentTextRef}></textarea>
       </div>
       <div className={styles.actions}>
-        <button className='btn'>Add Comment</button>
+        <button type='submit' className='btn'>Add Comment</button>
       </div>
     </form>
   )

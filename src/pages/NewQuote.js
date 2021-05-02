@@ -12,9 +12,7 @@ const NewQuote = () => {
     if (status === 'completed') history.replace('/quotes')
   }, [status, history])
 
-  const addQuoteHandler = data => {
-    sendRequest(data)
-  }
+  const addQuoteHandler = data => sendRequest(data)
 
   return <QuoteForm onAddQuote={addQuoteHandler} isLoading={status === 'pending'} />
 }

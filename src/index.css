@@ -27,7 +27,7 @@ body {
   background-color: teal;
   color: white;
   border-radius: 4px;
-  padding: 0.75rem 1.5rem;
+  padding: .75rem 1.5rem;
   border: 1px solid teal;
   cursor: pointer;
 }
@@ -45,7 +45,7 @@ body {
   border: none;
   background-color: none;
   text-decoration: none;
-  padding: 0.75rem 1.5rem;
+  padding: .75rem 1.5rem;
   border-radius: 4px;
 }
 
