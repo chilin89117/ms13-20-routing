@@ -21,6 +21,7 @@ const QuoteForm = ({isLoading, onAddQuote}) => {
       alert('Please enter valid data.')
       return
     }
+    setIsEntering(false)    // prevent Prompt and allow onAddQuote to navigate away
     onAddQuote({author: enteredAuthor, text: enteredText})
   }
 
@@ -40,7 +41,7 @@ const QuoteForm = ({isLoading, onAddQuote}) => {
             <textarea id='text' rows='5' ref={textInputRef}></textarea>
           </div>
           <div className={styles.actions}>
-            <button type='submit' className='btn' onClick={() => setIsEntering(false)}>Add Quote</button>
+            <button type='submit' className='btn'>Add Quote</button>
           </div>
         </form>
       </Card>

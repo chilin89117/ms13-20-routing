@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-import {Link, Route, useParams, useRouteMatch} from 'react-router-dom'
+import {Link, Route, useRouteMatch} from 'react-router-dom'
 import useHttp from '../hooks/use-http'
 import {getSingleQuote} from '../lib/api'
 import HighlightedQuote from '../components/quotes/HighlightedQuote'
@@ -8,9 +8,9 @@ import Comments from '../components/comments/Comments'
 import LoadingSpinner from '../components/UI/LoadingSpinner'
 
 const QuoteDetail = () => {
-  const match = useRouteMatch()   // e.g. match.path = '/quotes/:id', match.url = '/quotes/q1'
-  const params = useParams()
-  const {id} = params
+  // e.g. match.path = '/quotes/:id', match.url = '/quotes/q1', match.params = {id: 'q1'}
+  const match = useRouteMatch()
+  const {id} = match.params
   const {sendRequest, data, error, status} = useHttp(getSingleQuote, true)
 
   useEffect(() => {
